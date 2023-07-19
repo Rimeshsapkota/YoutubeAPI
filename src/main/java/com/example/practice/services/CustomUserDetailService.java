@@ -25,7 +25,6 @@ import java.util.Optional;
 public class CustomUserDetailService implements UserDetailsService {
     private UserRepository userRepository;
     private JwtTokenUtil jwtTokenUtil;
-
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         Optional<User> user = userRepository.findByUsername(username);
